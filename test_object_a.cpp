@@ -36,6 +36,4 @@ void ping_a()
     sendVec.push_back(rank);
     hpx::apply(ReceiverType1::receiveAction(), leftID,  10, sendVec);
     hpx::apply(ReceiverType1::receiveAction(), rightID, 11, sendVec);
-
-    hpx::unregister_with_basename(name, 0);
 }
